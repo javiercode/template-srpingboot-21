@@ -67,7 +67,6 @@ mvn spring-boot:run
 ```cmd
 mvn clean install
 java -jar SpringBootHolaMundo-0.0.1-SNAPSHOT.jar
-spring-boot:run -Dspring-boot.run.fork=false
 ```
 - **para compilar desde el IDE**:
 ```cmd
@@ -108,9 +107,6 @@ La clase principal se compila en el proyecto y se puede ejecutar con el siguient
 @RestController
 public class TestController {
 
-    @Autowired
-	private ACHService achServicio;
-
     @GetMapping("/test")
     public ResponseEntity<String> test(){
         return new ResponseEntity<String>("Hola mundo!!", HttpStatus.OK);
@@ -118,6 +114,7 @@ public class TestController {
 }
 ```
 y si lo ejecutamos con os comandos mencionados sale:
+ [http://localhost:8080/test](http://localhost:8080/test).
 
 <p align="center"><img src="https://raw.githubusercontent.com/javiercode/demoBG/main/src/main/resources/assets/holaMundo.png"></p>
 
