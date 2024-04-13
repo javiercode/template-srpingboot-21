@@ -132,4 +132,30 @@ La estructuración típica de los ficheros de una aplicación SB con distintas c
     └── web/
         └── TestController.java
 ```
+
 **[Ir al índice](#Índice)**
+
+## Instancias objetos
+
+Para instanciar un objeto, primero hay que tenemos que tener una clase. Supongamos que para este caso tenemos la clase User:
+
+```java
+@Getter
+@Setter
+@NoArgsConstructor
+public class User {
+    private String nombre;
+    private String username;
+    private LocalDate fechaRegistro = LocalDate.now();
+}
+```
+
+Con esta clase a continuación podemos crear la instancia
+
+```java
+        public void main{
+            User u = new User();
+            u.setNombre("javier");
+            u.setUsername("username.javier");
+        }
+```
