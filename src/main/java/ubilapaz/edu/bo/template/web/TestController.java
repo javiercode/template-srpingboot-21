@@ -3,10 +3,11 @@ package ubilapaz.edu.bo.template.web;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ubilapaz.edu.bo.template.dto.Response;
-import ubilapaz.edu.bo.template.dto.User;
+import ubilapaz.edu.bo.template.dto.UserDto;
 import ubilapaz.edu.bo.template.dto.Usuario;
 
 import java.time.LocalDateTime;
@@ -44,13 +45,14 @@ public class TestController {
         return new ResponseEntity<Response>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/dto")
-    public ResponseEntity<User> dtoGet(){
-        User u = new User();
+    @GetMapping("/dto/{id}")
+    public ResponseEntity<UserDto> dtoGet(@PathVariable Integer id){
+
+        UserDto u = new UserDto();
         u.setNombre("javier");
         u.setUsername("username.javier");
 
-        return new ResponseEntity<User>(u, HttpStatus.OK);
+        return new ResponseEntity<UserDto>(u, HttpStatus.OK);
     }
 
 
