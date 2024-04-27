@@ -1,6 +1,6 @@
 package ubilapaz.edu.bo.template.entity;
 
-@Entity
+//@Entity
 public class User {
 
     Integer id;
