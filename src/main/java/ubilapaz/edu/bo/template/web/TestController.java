@@ -15,12 +15,12 @@ import java.time.LocalDateTime;
 @RestController
 public class TestController {
 
-    @GetMapping("/test")
+    @GetMapping("/test1")
     public ResponseEntity<String> test(){
         return new ResponseEntity<String>("Hola mundo!!", HttpStatus.OK);
     }
 
-    @PostMapping("/test")
+    @PostMapping("/test1")
     public ResponseEntity<UsuarioDto> dto(){
         //Usuario
         //nombre: Pablo
@@ -34,7 +34,7 @@ public class TestController {
         return new ResponseEntity<UsuarioDto>(user, HttpStatus.OK);
     }
 
-    @GetMapping("/testDto")
+    @GetMapping("/testDto1")
     public ResponseEntity<Response> testDto(){
         Response response = new Response();
         response.setEstado(true);
@@ -45,7 +45,7 @@ public class TestController {
         return new ResponseEntity<Response>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/dto/{id}")
+    @GetMapping("/dto1/{id}")
     public ResponseEntity<UserDto> dtoGet(@PathVariable Integer id){
 
         UserDto u = new UserDto();
