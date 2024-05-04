@@ -1,7 +1,6 @@
 package ubilapaz.edu.bo.template.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
@@ -11,7 +10,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 //@Getter
 @Setter
-public class Usuario {
+public class UsuarioDto {
     private String nombre;
     private String usuario;
     private Boolean estado;

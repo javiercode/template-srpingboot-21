@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import ubilapaz.edu.bo.template.dto.Response;
 import ubilapaz.edu.bo.template.dto.UserDto;
-import ubilapaz.edu.bo.template.dto.Usuario;
+import ubilapaz.edu.bo.template.dto.UsuarioDto;
 
 import java.time.LocalDateTime;
 
@@ -21,17 +21,17 @@ public class TestController {
     }
 
     @PostMapping("/test")
-    public ResponseEntity<Usuario> dto(){
+    public ResponseEntity<UsuarioDto> dto(){
         //Usuario
         //nombre: Pablo
         //usuario: pgarcia
         //estodo: true
-        Usuario user = new Usuario();
+        UsuarioDto user = new UsuarioDto();
         user.setNombre("Pablo");
         user.setUsuario("pgarcia");
         user.setEstado(true);
         user.setFechaRegistro(LocalDateTime.now());
-        return new ResponseEntity<Usuario>(user, HttpStatus.OK);
+        return new ResponseEntity<UsuarioDto>(user, HttpStatus.OK);
     }
 
     @GetMapping("/testDto")
@@ -40,7 +40,7 @@ public class TestController {
         response.setEstado(true);
         response.setMensaje("exito<");
 
-        Usuario u = new Usuario();
+        UsuarioDto u = new UsuarioDto();
         u.setNombre("pablo");
         return new ResponseEntity<Response>(response, HttpStatus.OK);
     }
