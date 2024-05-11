@@ -12,5 +12,5 @@ import java.time.LocalDate;
 public class UserDto {
     private String nombre;
     private String username;
-    private LocalDate fechaRegistro = LocalDate.now();
+    private String password;
 }
