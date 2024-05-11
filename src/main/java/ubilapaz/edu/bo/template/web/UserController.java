@@ -46,5 +46,20 @@ public class UserController {
         return new ResponseEntity<UserDto>(u, HttpStatus.OK);
     }
 
+@PostMapping("/registrar")
+    public ResponseEntity<String> registrar(@RequestBody UserDto userDto){
+        String mensaje="registro exitoso";
+        System.out.println(userDto);
+
+        User u = new User();
+        u.setNombre(userDto.getNombre());
+        u.setUsername(userDto.getUsername());
+        u.setPassword(userDto.getPassword());
+
+        userRepository.save(u);
+
+        //mensaje="registro fallido";
+        return new ResponseEntity<String>(mensaje, HttpStatus.OK);
+    }
 
 }
