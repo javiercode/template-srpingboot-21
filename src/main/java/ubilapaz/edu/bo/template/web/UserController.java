@@ -36,7 +36,7 @@ public class UserController {
         return new ResponseEntity<Response>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/obtener/{id}")
+    @GetMapping("/dto/{id}")
     public ResponseEntity<UserDto> dtoGet(@PathVariable Integer id){
 
         User user= userRepository.getOne(1);
