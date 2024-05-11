@@ -36,15 +36,13 @@ public class UserController {
         return new ResponseEntity<Response>(response, HttpStatus.OK);
     }
 
-    @GetMapping("/dto/{id}")
+    @GetMapping("/obtener/{id}")
     public ResponseEntity<UserDto> dtoGet(@PathVariable Integer id){
-
-        User user= userRepository.getOne(1);
-
+        String saludo="hola";
+        User user= userRepository.getOne(id);
         UserDto u = new UserDto();
         u.setNombre(user.getNombre());
         u.setUsername(user.getUsername());
-
         return new ResponseEntity<UserDto>(u, HttpStatus.OK);
     }
 
