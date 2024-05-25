@@ -9,8 +9,8 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @NoArgsConstructor
-public class User {
+public class UserDto {
     private String nombre;
     private String username;
-    private LocalDate fechaRegistro = LocalDate.now();
+    private String password;
 }
