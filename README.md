@@ -10,6 +10,9 @@ Para iniciar una aplicación SB (SpringBoot a partir de ahora) bastará con ejec
 3. Habilitación de entorno
 4. Hola Mundo
 5. Primer rest
+6. Concejos
+7. Instancias de Objetos
+8. Swagger (Diccionario de Rest)
 
 ## Introducción
 
@@ -160,6 +163,7 @@ Con esta clase a continuación podemos crear la instancia
         }
 ```
 
+## Swagger (Diccionario de Rest)
 
 Para agreagar swwager solo añada la siguientes dependencias del siguiente [enlace](https://springdoc.org/)
 
