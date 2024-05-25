@@ -159,3 +159,58 @@ Con esta clase a continuación podemos crear la instancia
             u.setUsername("username.javier");
         }
 ```
+
+
+Para agreagar swwager solo añada la siguientes dependencias del siguiente [enlace](https://springdoc.org/)
+
+- Añada la dependencia de documentacion:
+```xml
+<dependency>
+  <groupId>org.springdoc</groupId>
+  <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+  <version>2.2.0</version>
+</dependency>
+```
+- Se podrá ver la documentacion asi:
+<p align="center"><img src="https://raw.githubusercontent.com/javiercode/demoBG/main/src/main/resources/assets/api-docs.png"></p>
+- Tambien se podra ver el resultado asi:
+
+- Se puede acceder al listado de api docs desde [enlace](http://localhost:8080/api-docs/).
+- Se puede acceder al SWAGGER desde el siguiente [enlace](http://localhost:8080/swagger-ui.html).
+<p align="center"><img src="https://raw.githubusercontent.com/javiercode/demoBG/main/src/main/resources/assets/swagger.png"></p>
+
+**[Ir al índice](#Índice)**
+
+Para agreagar conexion a bd se usa y mapear las tablas se usan la siguientes dependencias
+
+- Añada la dependencia de documentacion:
+```xml
+<dependency>
+ <groupId>jakarta.persistence</groupId>
+ <artifactId>jakarta.persistence-api</artifactId>
+</dependency>
+
+<dependency>
+ <groupId>com.mysql</groupId>
+ <artifactId>mysql-connector-j</artifactId>
+ <scope>runtime</scope>
+</dependency>
+```
+
+**[Ir al índice](#Índice)**
+
+### ¿Cómo se puede configurar una aplicación Spring Boot para que se redesplieguen los cambios automáticamente?
+Mediante el uso de DevTools:
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-devtools</artifactId>
+</dependency>
+```
+
+## Referencias
+* [Spring Boot - Reference Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
+* [Spring Boot in Action](https://doc.lagout.org/programmation/Spring%20Boot%20in%20Action.pdf)
+* [Spring Boot Learn by examples](http://samples.leanpub.com/springboot-learn-by-example-sample.pdf)
+* [Ejemplos de Spring Boot](https://github.com/spring-projects/spring-boot/tree/master/spring-boot-samples)
+  **[Ir al índice](#Índice)**

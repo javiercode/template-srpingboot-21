@@ -3,10 +3,7 @@ package ubilapaz.edu.bo.template.web;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ubilapaz.edu.bo.template.dto.Response;
 import ubilapaz.edu.bo.template.dto.UserDto;
 import ubilapaz.edu.bo.template.dto.UsuarioDto;
@@ -46,7 +43,7 @@ public class UserController {
         return new ResponseEntity<UserDto>(u, HttpStatus.OK);
     }
 
-@PostMapping("/registrar")
+    @PostMapping("/registrar")
     public ResponseEntity<String> registrar(@RequestBody UserDto userDto){
         String mensaje="registro exitoso";
         System.out.println(userDto);
